@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    /* ## Colors */
+    /* Primary */
+    --color-very-dark-magenta: hsl(300, 43%, 22%);
+    --color-soft-pink: hsl(333, 80%, 67%);
+    /* Neutral */
+    --color-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --color-light-grayish-magenta: hsl(300, 24%, 96%);
+    --color-white: hsl(0, 0%, 100%);
+    /* ## Typography */
+    --regular-fs: 15px;
+    --ff-spartan: 'Spartan', sans-serif;
+    --fw-regular: 400;
+    --fw-thick: 500;
+    --fw-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff-spartan);
+    font-size: var(--regular-fs);
+}
+
+body {
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+}
+
+.page {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content 30px;
+    grid-template-areas: "header" "rating" "reviews" "footer";
+    grid-gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 95rem;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+}
+
+.heading-1 {
+    color: var(--color-very-dark-magenta);
+    margin: 1rem auto;
+    line-height: 55px;
+    font-size: 50px;
+}
+
+.detail {
+    color: var(--color-dark-grayish-magenta);
+}
+
+.star-rating {
+    grid-area: rating;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.rating-card {
+    background-color: var(--color-light-grayish-magenta);
+    color: var(--color-very-dark-magenta);
+    font-size: .8rem;
+    font-weight: var(--fw-bold);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    width: min(100%, 380px);
+    gap: .5em;
+}
+
+.comment {
+    font-size: 13px;
+    line-height: 17px;
+    padding-left: 0.3rem;
+}
+
